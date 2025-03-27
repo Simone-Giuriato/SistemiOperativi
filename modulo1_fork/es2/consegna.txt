@@ -1,0 +1,16 @@
+Esercizio 2
+Si scriva un programma interattivo che permetta all'utente di visualizzare una "anteprima"
+dei file di testo nella directory corrente. Il programma deve presentare la seguente
+interfaccia di invocazione:
+
+anteprima <num>
+
+dove num è un numero intero.
+Per prima cosa, il programma si deve interfacciare con l’utente, leggendo da tastiera il
+nome del file di cui visualizzare l'anteprima. Dopo aver verificato che il file con il nome
+inserito dall'utente sia effettivamente esistente, il programma deve quindi stampare a video
+le prime num righe del file richiesto.
+Al termine dell'operazione, il programma deve mettersi in attesa di una nuova richiesta da
+parte dell'utente e terminare nel caso in cui l'utente inserisca la stringa "fine".
+Per la realizzazione della visualizzazione delle prime num righe dei file richiesti dall'utente,
+si faccia uso dei comandi di shell.
