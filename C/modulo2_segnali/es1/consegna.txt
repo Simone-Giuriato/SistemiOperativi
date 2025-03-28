@@ -1,0 +1,37 @@
+Esercizio 1 - Testo
+
+Si scriva un’applicazione concorrente in C con la seguente interfaccia:
+
+itercounter Nf Nsec
+
+In questo programma, un processo padre deve generare un numero
+Nf di processi figli. Ognuno di essi esegue un ciclo infinito, all'interno
+del quale il processo dorme per un secondo.
+
+Il padre a sua volta dorme per Nsec secondi, dopodiché lancia un
+SIGUSR1 ai figli.
+
+Al ricevimento del segnale SIGUSR1, ogni figlio deve visualizzare le
+iterazioni compiute, prima di terminare le operazioni.
+
+5
+
+Esercizio 1 - Traccia
+
+❏ #include necessarie
+❏ gestore del segnale (stampa del contatore globale)
+❏ controllo argomenti
+❏ generazione dei figli
+❏ se sono nel figlio:
+❏ imposto la gestione del segnale SIGUSR1
+❏ while(true):
+❏ dormo per 1 secondo
+❏ aumento il contatore
+
+❏ se sono nel padre:
+❏ dormo per Nsec secondi
+❏ invio SIGUSR1 ai figli
+❏ attendo la morte dei figli
+
+NB: due possibilità per inviare SIGUSR1 a tutti i figli. Quali? Cosa
+cambia?
