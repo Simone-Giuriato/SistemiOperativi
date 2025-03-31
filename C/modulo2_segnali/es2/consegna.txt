@@ -1,0 +1,57 @@
+Esercizio 2 - Testo 1/2
+
+Si scriva un’applicazione concorrente in C con la seguente interfaccia:
+
+cercaCarFile C1 [C2 ... Cn] NomeFile NumSec
+
+dove i parametri C1 [C2 ... Cn] sono singoli caratteri alfabetici,
+NumSec è un numero intero e NomeFile è un nome di file assoluto.
+
+L’applicazione è una semplice gara tra processi. Il processo iniziale
+deve generare un processo figlio per ciascun carattere Ci passato
+come parametro. Ciascuno di essi avrà il compito di cercare uno
+specifico carattere all'interno del file passato come parametro. In
+particolare, l'i-esimo processo figlio deve contare quante volte il
+carattere Ci è presente in NomeFile. Al termine della gara, ciascun
+figlio deve stampare a video il numero di caratteri trovati. Vince la gara
+il processo che ha trovato il maggior numero di caratteri.
+
+7
+
+Esercizio 2 - Testo 2/2
+
+Si progetti l’applicazione cercando, per quanto possibile, di rendere la
+competizione tra i processi giusta, nel senso che i processi
+dovrebbero avere tutti lo stesso tempo NumSec per eseguire il
+conteggio. A questo proposito, il processo padre deve svolgere il ruolo
+di "arbitro" e utilizzare i segnali come strumento di sincronizzazione
+per la notifica ai processi figli degli eventi di inizio e fine gara.
+
+Nel caso un processo figlio termini il conteggio prima che il tempo
+concessogli sia scaduto, esso vince automaticamente la gara. Il
+processo vincitore deve notificare gli altri processi, che a questo punto
+possono interrompere il conteggio e terminare, stampare a video il
+numero di caratteri trovati e infine terminare l'esecuzione.
+
+(Si consiglia ovviamente di eseguire la ricerca dei caratteri in un file di
+grandi dimensioni.)
+
+8
+
+Esercizio 2 - Traccia
+
+❏ #include delle librerie
+❏ dichiarazione gestori dei segnali
+❏ controllo degli argomenti
+❏ generazione dei figli
+❏ se codice di un figlio:
+❏ gestione dei segnali
+❏ aspetto il segnale di start
+❏ eseguo il conteggio sul file
+❏ se sono arrivato qui ho vinto, faccio terminare la gara
+❏ se codice del padre:
+❏ gestione dei segnali
+❏ invio segnale di start ai figli
+❏ aspetto Numsec secondi
+❏ tempo scaduto, faccio terminare la gara
+❏ attendo la morte dei figli
