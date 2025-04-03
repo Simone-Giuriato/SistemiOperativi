@@ -1,0 +1,24 @@
+Esercizio 1 - Testo
+
+Si progetti un'applicazione concorrente multi processo che permetta al personale
+dell'Ufficio Segreteria di Ateneo di controllare il numero di esami sostenuti dagli studenti.
+L'applicazione dovrà essere realizzata in C e presentare la seguente interfaccia:
+
+controlla_esami file_dati
+
+dove file_dati è un nome assoluto di file con le informazioni sugli esami sostenuti dagli
+studenti. In particolare, si supponga che file_dati contenga una riga per ogni esame
+sostenuto (con numero di matricola dello studente, nome del corso, numero di crediti e
+voto riportato).
+L'applicazione deve essere composta da un processo iniziale P0 che prima di tutto si
+interfaccia con l'utente, da cui riceve (via terminale) il numero di matricola dello studente
+a cui è interessato. Per ogni richiesta, P0 deve generare 2 figli: P1 e P2. P1 si deve
+occupare di selezionare le informazioni sugli esami sostenuti dallo studente desiderato,
+prendendole da file_dati, e inviarle a P2. A sua volta, P2 deve contare il numero di esami
+sostenuti dallo studente, e stamparlo a video.
+
+Dopodiché P1 e P2 terminano, e P0 si mette in attesa di una nuova richiesta da parte
+dell'utente. L'applicazione termina quando l'utente inserisce la stringa "fine".
+
+4
+
