@@ -1,0 +1,17 @@
+Si progetti un'applicazione concorrente multi processo che permetta al responsabile di
+produzione di una fabbrica di verificare la disponibilità della necessaria quantità di materie
+prime nei magazzini aziendali.
+L'applicazione dovrà essere realizzata in C e presentare la seguente interfaccia:
+controlla_disponibilita magazzino-1 magazzino-2 ... magazzino-N
+dove magazzino-1, magazzino-2, ..., magazzino-N sono nomi relativi di file.
+L'applicazione deve essere composta da un processo iniziale P0 che prima di tutto genera
+N figli (P1, P2,..., PN), uno per ogni magazzino specificato. P0 si interfaccia quindi con
+l'utente, da cui riceve (via terminale) il nome della materia prima di interesse. A questo
+punto, P0 deve comunicare il nome della materia prima a ciascun processo Pi, che a sua
+volta dovrà restituire a P0 il numero di unità di stoccaggio disponibili nel magazzino-i. A
+questo fine, ogni processo Pi deve consultare il file di nome magazzino-i che si suppone
+contenere una riga (con nome della materia prima e informazioni sullo scaffale dove si
+trova) per ogni unità di stoccaggio presente in magazzino.
+P0 deve quindi stampare a video il numero di unità di stoccaggio di materia prima
+disponibili in ciascun magazzino e infine rimanere in attesa della prossima richiesta.
+L'applicazione termina quando l'utente inserisce la stringa "fine".
