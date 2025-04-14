@@ -1,0 +1,5 @@
+120,NNNN,New York,Parigi,20240108
+900,DDDD,Dubai,Napoli,20250910
+458,Ahusd,Napoli,Vienna,20250910
+900,IDHIOF,Dubai,Verona,20250910
+800,SDUGFI,Mosca,Londra,20250910
