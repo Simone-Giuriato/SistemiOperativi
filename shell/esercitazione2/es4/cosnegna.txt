@@ -1,0 +1,34 @@
+ESERCIZIO 4
+
+Si scriva un file comandi in Shell di Bourne che abbia un'interfaccia del
+tipo:
+
+esame estensione dir1 dir2
+
+dove estensione è una qualsiasi stringa che inizia con un punto, dir1 e
+dir2 siano nomi assoluti di direttorio. Si svolgano gli opportuni controlli
+sui parametri di invocazione del file comandi.
+
+Il file comandi deve cercare tutti i file con l'estensione passata come
+parametro in tutto il sottoalbero individuato da dir1 e li deve copiare in
+dir2 se e solo se la copia NON va a sovrascrivere file già esistenti con
+lo stesso nome in quel direttorio.
+
+Alla fine dell'esecuzione si visualizzi il numero di file
+complessivamente copiati
+
+TRACCIA:
+
+esame.sh
+
+❏ Controllo degli argomenti
+❏ controllare il numero dei parametri passati (numero e tipo)
+❏ aggiunta della directory script corrente alla variabile $PATH
+❏ Chiamata a esame_rec.sh <parametri>
+
+esame_rec.sh
+
+❏ Per ogni file all’interno della directory con l’estensione scelta
+copiarlo nella directory di destinazione.
+❏ Su ogni cartella (su cui ho i diritti di esecuzione) presente nella
+directory corrente chiamare esame_rec.sh <parametri>

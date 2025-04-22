@@ -1,0 +1,23 @@
+Si scriva il file comandi "contaricorrenze" che conti, in un file il
+cui nome è passato come primo parametro, in quante righe
+ricorre ognuna delle parole passate come successivi parametri.
+
+Esempio:
+
+$ sh contaricorrenze.sh processi sbin var
+Apertura file processi...
+Parametro: sbin - Ricorrenze: 26
+Parametro: var - Ricorrenze: 4
+
+13
+
+ESERCIZIO 2 - TRACCIA
+
+contaricorrenze.sh file stringa1 ...
+
+❏ Il lancio del file “contaricorrenze.sh” richiede due o più
+parametri
+❏ controllare il numero dei parametri passati
+❏ controllare se il primo parametro è un file
+❏ Contare per ogni stringa passata il numero delle occorrenze
+nel file.

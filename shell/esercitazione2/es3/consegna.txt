@@ -1,0 +1,26 @@
+ESERCIZIO 3
+
+Si implementi un file comandi "trova" che effettui la ricerca di un
+file in modo ricorsivo a partire da una directory assoluta
+specificata dall'utente.
+
+Esempio:
+
+$ sh trova.sh dir file
+
+15
+
+ESERCIZIO 3 - TRACCIA
+
+trova.sh dir file
+
+❏ Controllo dei parametri
+❏ controllare il numero dei parametri passati (numero e tipo)
+❏ dir deve essere un nome di directory assoluto
+❏ Per ogni file all’interno della directory:
+❏ Se è un file:
+❏ Verificare l’uguaglianza con il nome cercato e stampare a
+video il percorso assoluto del file
+
+❏ Se è una directory:
+❏ Lanciare la ricerca all’interno della directory
