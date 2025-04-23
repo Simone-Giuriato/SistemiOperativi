@@ -1,0 +1,40 @@
+Esercizio 2
+
+Utilizzando i comandi Unix, si scriva un file comandi in shell di Bourne che preveda i
+seguenti parametri come argomenti:
+
+cercaFile stringa dir num
+
+dove stringa è una stringa, dir é un nome assoluto di directory e num è un intero.
+
+Il file comandi deve esplorare in modo ricorsivo la directory passata come parametro
+per ricercare tutti i file che siano leggibili dall’utente, che abbiano estensione “.txt” e
+all’interno dei quali la stringa stringa compare in almeno num righe.
+
+Al termine delle operazioni, il file comandi deve scrivere a video il nome della
+directory che contiene il maggior numero di file che soddisfano le condizioni
+richieste.
+
+ Traccia
+
+cercaFile.sh
+❏ controllo dei parametri
+❏ aggiunta della directory script corrente alla variabile $PATH
+❏ creazione dei file max_counter.tmp e max_dirname.tmp
+❏ chiamata a cercastringa.sh <parametri>
+❏ stampa risultato
+
+cercastringa.sh
+❏ entrare nella cartella
+❏ creazione del file counter.tmp
+❏ per ogni file con estensione .txt
+❏ se è un file e il file soddisfa le specifiche → scrittura di una riga nel file
+counter.tmp
+
+❏ se numero righe counter.tmp > numero righe max_counter.tmp aggiornamento di
+max_counter.tmp e max_dirname.tmp
+❏ esplorazione ricorsiva della cartella
+
+(alternativamente all’uso del file counter.tmp si può utilizzare una variabile
+contatore, il cui valore andrà incrementato per ogni file che soddisfa le richieste e
+salvato in max_counter.tmp quando necessario).

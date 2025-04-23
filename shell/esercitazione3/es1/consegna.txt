@@ -1,0 +1,43 @@
+Utilizzando la shell di Bourne si scriva un file comandi che permetta la ricerca di file
+con l'estensione desiderata, e il loro spostamento. Il file comandi deve avere la
+seguente interfaccia:
+
+muoviFile num dirSorgente dirDestinazione ext1 ext2...extN
+
+dove num è un intero, ext1 ext2...extN sono stringhe che rappresentano
+un'estensione di file (iniziano quindi con un punto), dirSorgente e dirDestinazione
+sono nomi assoluti di directory.
+
+Il file comandi deve esplorare dirSorgente in modo ricorsivo, alla ricerca dei file con
+estensione ext1 ext2...extN che abbiano:
+❏ diritto di lettura per l'utente
+❏ un numero di righe maggiore o uguale a num.
+
+Ogni file che soddisfi le condizioni sopra elencate deve essere spostato nella
+directory dirDestinazione.
+Al termine dell'esecuzione, il file comandi deve stampare il numero totale dei file
+trovati che soddisfano le condizioni richieste.
+
+
+Esercizio 1 - Traccia
+
+muoviFile.sh
+❏ controllo dei parametri
+❏ aggiunta della directory script corrente alla variabile $PATH
+❏ creazione del file counter.tmp, dove ci salveremo una riga per ciascun file
+copiato
+❏ chiamata a ricerca.sh <parametri>
+❏ stampa del numero di righe del file counter.tmp
+
+ricerca.sh
+❏ entrata nella cartella passata come parametro
+❏ per ogni estensione
+❏ per ogni file con quell'estensione
+❏ se si tratta di un file
+❏ se l'utente ha i diritti di lettura e numero righe >= num scrittura di una
+riga nel file counter.tmp
+❏ copia del file nella cartella destinazione
+
+❏ ricorsione: per ogni directory
+❏ se si tratta di una directory e l'utente ha i diritti di esecuzione
+❏ chiamata a ricerca.sh <parametri> passando la directory corrente
