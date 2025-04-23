@@ -1,0 +1,4 @@
+20250501,A111,Girasoli,Van Googh
+20250502,E412,Urlo Moonch,Van Googh
+20260601,A413,Monnalisa,Van Googh
+20240501,A111,Arte Moderna ,Luperto
