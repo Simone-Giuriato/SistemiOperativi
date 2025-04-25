@@ -1,0 +1,2 @@
+Tv 40 pollici,Samsung,Cina,50,10kg,scaffale1,20230101
+telefono,Iphone,Cina,50,0.5kg,scaffale3,20240202
