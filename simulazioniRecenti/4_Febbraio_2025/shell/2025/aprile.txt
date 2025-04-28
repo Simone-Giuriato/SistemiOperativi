@@ -1,0 +1,2 @@
+OBS0001,20250401,Lupo,Foresta,Simone
+OBS0002,20250401,Orso,Ruscello,Simone

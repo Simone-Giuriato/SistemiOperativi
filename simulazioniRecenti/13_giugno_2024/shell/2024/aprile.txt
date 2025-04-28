@@ -1,0 +1,4 @@
+D0002,20240410,Camion,Roma,ALberto
+T005,20240405,Corriera,Napoli,Simone
+T0051,20240410,Autobus,Pavia,Gianni
+T0001,20240418,Autobus,Roma,Marco

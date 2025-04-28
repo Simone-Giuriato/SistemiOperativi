@@ -1,0 +1,3 @@
+OBS0001,20240506,Lupo,Foresta,Simone
+OBS0002,20240510,Orso,Ruscello,Luca
+OBS0003,20240505,Lupo,Giungla,Marco
